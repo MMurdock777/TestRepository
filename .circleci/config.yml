@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: python:3.6.3-jessie
+      - image: python:3.6.3
 
     working_directory: /tmp
     steps:
