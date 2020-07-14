@@ -1,4 +1,4 @@
-name: env_win
+name: py3
 channels:
   - defaults
 dependencies:
