@@ -1,7 +1,7 @@
 version: 2.1
 jobs:
   build:
-  working_directory: ~/TestRepository
+    working_directory: ~/TestRepository
     docker:
       - image: python:3.6.3-jessie
 
