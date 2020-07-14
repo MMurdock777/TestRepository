@@ -1,4 +1,4 @@
-ipykernel==7.16.1
+ipykernel==5.3.2
 jupyter-client==6.1.5
 nbconvert==5.6.1
 numpy==1.19.0
