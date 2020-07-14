@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/TestRepository
     docker:
-      - image: python:3.6.3-jessie
+      - image: circleci/python:3.6.6 
 
     steps:
       - run: # install and activate virtual environment with pip
