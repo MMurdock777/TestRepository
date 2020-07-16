@@ -14,8 +14,8 @@ jobs:
              python3 -m venv venv
              . venv/bin/activate
              pip install -r requirements.txt
-      -run: 
-         jupyter-nbcovert Homework1.ipynb
+       
+         jupyter-nbcovert --execute ./Homework1.ipynb
       - store_artifacts:
-          path: JupyterToHTML
+          path: ./Homework1.ipynb
           destination: JupyterToHTML
