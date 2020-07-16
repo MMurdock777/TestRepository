@@ -16,7 +16,7 @@ jobs:
              pip install -r requirements.txt
        
       - run: 
-         jupyter-nbcovert --execute ./Homework1.ipynb
+         jupyter-nbconvert --execute ./Homework1.ipynb
       - store_artifacts:
           path: ./Homework1.ipynb
           destination: JupyterToHTML
