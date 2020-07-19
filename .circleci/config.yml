@@ -15,6 +15,10 @@ jobs:
              pip install -r requirements.txt
              jupyter-nbconvert --execute ./Homework1.ipynb
 
+           
+      - run: 
+          command: |
+            . venv/bin/activate
              export KAGGLE_KEY
              export KAGGLE_LOGIN
              touch .kaggle/kaggle.json
