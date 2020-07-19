@@ -21,7 +21,8 @@ jobs:
             . venv/bin/activate
              export KAGGLE_KEY
              export KAGGLE_LOGIN 
-             echo "{"username":\"${KAGGLE_USERNAME}\","key":\"${KAGGLE_KEY}\}" > .kaggle/kaggle.json
+             touch kaggle.json
+             echo "{"username":\"${KAGGLE_USERNAME}\","key":\"${KAGGLE_KEY}\}" > kaggle.json
              kaggle competitions download titanic
              jupyter-nbconvert --execute TitanicNotebook.ipynb
              kaggle competitions submit titanic -f titanic.csv 
