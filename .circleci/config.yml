@@ -21,9 +21,8 @@ jobs:
             . venv/bin/activate
              export KAGGLE_KEY
              export KAGGLE_LOGIN 
-             mkdir kaggle.json
              echo "{"username":\"${KAGGLE_USERNAME}\","key":\"${KAGGLE_KEY}\}" > kaggle.json
-             mkdir .kaggle
+             mkdir ~/.kaggle
              mv kaggle.json .kaggle
              kaggle competitions download titanic
              jupyter-nbconvert --execute TitanicNotebook.ipynb
