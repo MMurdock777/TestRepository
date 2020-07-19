@@ -23,6 +23,7 @@ jobs:
              export KAGGLE_LOGIN 
              touch kaggle.json
              echo "{"username":\"${KAGGLE_USERNAME}\","key":\"${KAGGLE_KEY}\}" > kaggle.json
+             mv kaggle.json .kaggle
              kaggle competitions download titanic
              jupyter-nbconvert --execute TitanicNotebook.ipynb
              kaggle competitions submit titanic -f titanic.csv 
