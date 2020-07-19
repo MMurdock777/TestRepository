@@ -19,12 +19,12 @@ jobs:
       - run: 
           command: |
             . venv/bin/activate
+             cd ..
              export KAGGLE_KEY
              export KAGGLE_LOGIN 
              echo "{"username":\"${KAGGLE_LOGIN}\","key":\"${KAGGLE_KEY}\}" > kaggle.json
              mkdir .kaggle
              mv kaggle.json .kaggle
-             ls .
              kaggle competitions submit titanic -f titanic.csv
              
              jupyter-nbconvert --execute TitanicNotebook.ipynb
