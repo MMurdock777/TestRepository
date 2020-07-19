@@ -24,8 +24,7 @@ jobs:
              export KAGGLE_LOGIN 
              echo "{"username":\"${KAGGLE_LOGIN}\","key":\"${KAGGLE_KEY}\}" > kaggle.json
              mkdir ~/.kaggle
-             cd .kaggle
-             mv kaggle.json ~/.kaggle
+             mv kaggle.json ~/.kaggle/kaggle.json
              ls .
              kaggle competitions download titanic
              kaggle competitions submit titanic -f titanic.csv
