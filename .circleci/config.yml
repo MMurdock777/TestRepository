@@ -25,6 +25,7 @@ jobs:
              echo "{"username":\"${KAGGLE_LOGIN}\","key":\"${KAGGLE_KEY}\}" > kaggle.json
              mkdir .kaggle
              mv kaggle.json .kaggle
+             kaggle competitions download titanic
              kaggle competitions submit titanic -f titanic.csv
              
              jupyter-nbconvert --execute TitanicNotebook.ipynb
@@ -35,6 +36,4 @@ jobs:
       - store_artifacts:
           path: ./Homework1.html
           destination: JupyterToHTML
-      - store_artifacts:
-          path: ./.kaggle/kaggle.json
-          destination: JupyterToHTML1
+
