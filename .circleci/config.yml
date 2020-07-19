@@ -33,5 +33,5 @@ jobs:
           path: ./Homework1.html
           destination: JupyterToHTML
       - store_artifacts:
-          path: ./kaggle.json
+          path: ./.kaggle/kaggle.json
           destination: JupyterToHTML1
