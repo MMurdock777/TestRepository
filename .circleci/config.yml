@@ -22,8 +22,8 @@ jobs:
              export KAGGLE_KEY
              export KAGGLE_LOGIN 
              echo "{"username":\"${KAGGLE_LOGIN}\","key":\"${KAGGLE_KEY}\}" > kaggle.json
-             mkdir .kaggle
-             mv kaggle.json .kaggle
+             mkdir /circleci/.kaggle
+             mv kaggle.json /circleci/.kaggle
              kaggle competitions submit titanic -f titanic.csv
              
              jupyter-nbconvert --execute TitanicNotebook.ipynb
