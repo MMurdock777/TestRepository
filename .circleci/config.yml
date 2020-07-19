@@ -22,7 +22,6 @@ jobs:
              export KAGGLE_KEY
              export KAGGLE_LOGIN 
              echo 'This is a test' > foo.txt
-             kaggle competitions download titanic
              jupyter-nbconvert --execute TitanicNotebook.ipynb
 
           paths:
