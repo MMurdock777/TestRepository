@@ -21,7 +21,9 @@ jobs:
             . venv/bin/activate
              export KAGGLE_KEY
              export KAGGLE_LOGIN 
-             echo 'This is a test' > foo.txt
+             echo "{"username":\"${KAGGLE_USERNAME}\","key":\"${KAGGLE_KEY}\}" > kaggle.json
+             mkdir .kaggle
+             mv kaggle.json .kaggle
              jupyter-nbconvert --execute TitanicNotebook.ipynb
 
           paths:
@@ -30,3 +32,6 @@ jobs:
       - store_artifacts:
           path: ./Homework1.html
           destination: JupyterToHTML
+      - store_artifacts:
+          path: ./kaggle.json
+          destination: JupyterToHTML1
