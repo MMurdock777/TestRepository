@@ -27,7 +27,7 @@ jobs:
              kaggle competitions download titanic
              dir
              python -m zipfile -e titanic.zip ./
-             #jupyter-nbconvert --execute TitanicNotebook.ipynb
+             jupyter-nbconvert --execute TitanicNotebook.ipynb
              #kaggle competitions submit titanic -f titanic.csv
                       
           paths:
