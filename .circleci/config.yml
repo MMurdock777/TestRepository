@@ -18,8 +18,6 @@ jobs:
            
       - run: 
           command: |
-            . venv/bin/activate
-             cd ..
              export KAGGLE_KEY
              export KAGGLE_LOGIN 
              echo "{"username":\"${KAGGLE_LOGIN}\","key":\"${KAGGLE_KEY}\}" > kaggle.json
@@ -31,8 +29,6 @@ jobs:
              
              jupyter-nbconvert --execute TitanicNotebook.ipynb
 
-          paths:
-           - "venv"
 
       - store_artifacts:
           path: ./Homework1.html
