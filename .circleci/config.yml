@@ -18,6 +18,7 @@ jobs:
            
       - run: 
           command: |
+             . venv/bin/activate
              export KAGGLE_KEY
              export KAGGLE_LOGIN 
              echo "{"username":\"${KAGGLE_LOGIN}\","key":\"${KAGGLE_KEY}\}" > kaggle.json
