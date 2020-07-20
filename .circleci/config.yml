@@ -22,6 +22,7 @@ jobs:
              export KAGGLE_KEY
              export KAGGLE_LOGIN 
              echo "{"username":\"${KAGGLE_LOGIN}\","key":\"${KAGGLE_KEY}\}" > kaggle.json
+             chmod 600 /home/circleci/.kaggle/kaggle.json
              mkdir ~/.kaggle
              mv kaggle.json ~/.kaggle/kaggle.json
              kaggle competitions download titanic
