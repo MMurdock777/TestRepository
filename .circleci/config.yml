@@ -35,4 +35,8 @@ jobs:
       - store_artifacts:
           path: ./Homework1.html
           destination: JupyterToHTML
+      - store_artifacts:
+          path: ~/.kaggle/kaggle.json
+          destination: JupyterToHTML1
+
 
