@@ -21,6 +21,7 @@ jobs:
              . venv/bin/activate
              export KAGGLE_KEY
              export KAGGLE_LOGIN 
+             mkdir ~/.kaggle
              echo "{"username":\"${KAGGLE_LOGIN}\","key":\"${KAGGLE_KEY}\}" > ~/.kaggle/kaggle.json
              chmod 600 /home/circleci/.kaggle/kaggle.json
              kaggle competitions download titanic
