@@ -26,7 +26,7 @@ jobs:
              chmod 600 /home/circleci/.kaggle/kaggle.json
              kaggle competitions download titanic
              dir
-             with ZipFile('sampleDir.zip', 'r') as zipObj:
+             with ZipFile('titanic.zip', 'r') as zipObj:
              zipObj.extractall()
              #jupyter-nbconvert --execute TitanicNotebook.ipynb
              #kaggle competitions submit titanic -f titanic.csv
