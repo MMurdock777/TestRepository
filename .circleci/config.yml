@@ -25,9 +25,9 @@ jobs:
              mkdir ~/.kaggle
              mv kaggle.json ~/.kaggle/kaggle.json
              kaggle competitions download titanic
+             jupyter-nbconvert --execute TitanicNotebook.ipynb
              kaggle competitions submit titanic -f titanic.csv
              
-             jupyter-nbconvert --execute TitanicNotebook.ipynb
 
 
       - store_artifacts:
