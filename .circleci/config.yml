@@ -28,6 +28,7 @@ jobs:
              dir
              zipObj = ZipFile('titanic.zip', 'r')
              zipObj.extractall()
+             zf.close()
              #jupyter-nbconvert --execute TitanicNotebook.ipynb
              #kaggle competitions submit titanic -f titanic.csv
                       
